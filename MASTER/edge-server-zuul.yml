@@ -12,6 +12,6 @@ zuul:
     request: true
   routes:
     config-client-sample:
-        path: /onfig-client-sample/**
+        path: /config-client-sample/**
         serviceId: CONFIG-CLIENT-SAMPLE
         stripPrefix: true
