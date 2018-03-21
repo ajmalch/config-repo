@@ -7,3 +7,11 @@ eureka:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
   instance:
     preferIpAddress: true
+zuul:
+  debug:
+    request: true
+  routes:
+    config-client-sample:
+        path: /onfig-client-sample/**
+        serviceId: CONFIG-CLIENT-SAMPLE
+        stripPrefix: true
