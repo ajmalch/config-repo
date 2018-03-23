@@ -14,3 +14,7 @@ zuul:
         path: /config-client-sample/**
         serviceId: config-client-sample
         stripPrefix: true
+    feign-client-sample:    
+        path: /feign-client-sample/**
+        serviceId: feign-client-sample
+        stripPrefix: true
