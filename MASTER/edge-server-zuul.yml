@@ -3,7 +3,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URI:https://discovery-server-example.herokuapp.com/}
+      defaultZone: ${EUREKA_URI:https://discovery-server-example.herokuapp.com/eureka}
   instance:
     preferIpAddress: true
 zuul:
