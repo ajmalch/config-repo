@@ -1,0 +1,19 @@
+server:
+  port: 8765
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
+    
+spring.cloud.gateway:
+  routes:
+  - id: config-client-sample
+    uri: lb://config-client-sample
+    predicates:
+    - Path=/config-client-sample/
+  - id: feign-client-sample
+    uri: lb://feign-client-sample
+    predicates:
+    - Path=/feign-client-sample/
