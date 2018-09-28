@@ -1,5 +1,5 @@
 server:
-  port: 8765
+  port: 8085
 eureka:
   client:
     serviceUrl:
@@ -7,13 +7,15 @@ eureka:
   instance:
     preferIpAddress: true
     
-spring.cloud.gateway:
-  routes:
-  - id: config-client-sample
-    uri: lb://config-client-sample
-    predicates:
-    - Path=/config-client-sample/
-  - id: feign-client-sample
-    uri: lb://feign-client-sample
-    predicates:
-    - Path=/feign-client-sample/
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: config-client-sample
+        uri: lb://config-client-sample
+        predicates:
+        - Path=/config-client-sample/
+      - id: feign-client-sample
+        uri: lb://feign-client-sample
+        predicates:
+        - Path=/feign-client-sample/
