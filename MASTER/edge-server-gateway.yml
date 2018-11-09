@@ -15,7 +15,7 @@ spring:
         uri: lb://feign-client-sample/feign-client
         predicates:
         - Path=/feign-client/**
-     routes:
+        
       - id: config-client-sample
         uri: lb://config-client-sample/config-client
         predicates:
