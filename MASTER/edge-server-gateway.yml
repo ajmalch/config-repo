@@ -12,10 +12,10 @@ spring:
     gateway:
       routes:
       - id: config-client-sample
-        uri: lb://config-client-sample
+        uri: lb://config-client-sample/sayHi
         predicates:
-        - Path=/**
+        - Path=/sayHi
       - id: feign-client-sample
-        uri: lb://feign-client-sample
+        uri: lb://feign-client-sample/hello
         predicates:
-        - Path=/**
+        - Path=/hello
