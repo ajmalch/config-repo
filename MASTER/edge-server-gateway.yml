@@ -11,10 +11,6 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: config-client-sample
-        uri: lb://config-client-sample/
-        predicates:
-        - Path=/**
       - id: feign-client-sample
         uri: lb://feign-client-sample/
         predicates:
