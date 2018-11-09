@@ -12,6 +12,6 @@ spring:
     gateway:
       routes:
       - id: feign-client-sample
-        uri: lb://feign-client-sample/feign-client-sample
+        uri: lb://feign-client-sample/test
         predicates:
-        - Path=/hello/**
+        - Path=/test/**
