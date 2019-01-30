@@ -20,3 +20,8 @@ spring:
         uri: lb://config-client-sample/config-client
         predicates:
         - Path=/config-client/**
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
