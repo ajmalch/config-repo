@@ -19,7 +19,7 @@ spring:
       - id: config-client-sample
         uri: lb://config-client-sample/config-client2
         predicates:
-        - Path=/config-client2/**
+        - Path=/config-client/**
   rabbitmq:
     host: localhost
     port: 5672
